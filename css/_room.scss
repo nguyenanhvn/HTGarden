@@ -1,0 +1,256 @@
+// Room S1
+    .room-s1{
+        padding: 80px 0;
+        @media (max-width: 992px){
+            padding: 50px 0;
+        }
+        .box{
+            text-align: center;
+            .box-icon{
+                img{
+                    max-height: 88px;
+                    @media (max-width: 450px){
+                        max-height: 66px;
+                    }
+                }
+            }
+            .box-text{
+                margin: 32px auto auto;
+                max-width: 722px;
+                font: normal normal 300 24px/1.2 Fraunces;
+                color: #8E6941;
+                @media (max-width: 992px){
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+// Room S2
+    .room-s2{
+        padding-bottom: 120px;
+        @media (max-width: 992px){
+            padding-bottom: 60px;
+        }
+        &.sticky{
+            .box{
+                .box-nav{
+                    position: fixed;
+                }
+            }
+        }
+        .box{
+            .box-nav{
+                background: $color-green;
+                display: flex;
+                justify-content: center;
+                padding: 14px 15px;
+                position: sticky;
+                top: 80px;
+                z-index: 99;
+                @media (max-width: 992px){
+                    display: none;
+                }
+                ul{
+                    display: flex;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        padding: 4px 24px;
+                        font: normal normal normal 14px/1.5 Raleway;
+                        color: #fff;
+                        cursor: pointer;
+                        pointer-events: auto;
+                        + li{
+                            border-left: 1px solid rgba(#fff, 0.2);
+                        }
+                        &:hover,
+                        &.active{
+                            color: $color;
+                        }
+                    }
+                }
+            }
+            .box-contents{
+                max-width: 946px;
+                margin: auto;
+                background: #fff;
+                padding: 72px 0 60px;
+                @media (max-width: 1200px){
+                    max-width: 100%;
+                }
+                @media (max-width: 992px){
+                    padding: 0;
+                    background: transparent;
+                }
+                .child{
+                    padding: 60px 0;
+                    @media (max-width: 992px){
+                        padding: 0;
+                        background: #fff;
+                        + .child{
+                            margin-top: 15px;
+                        }
+                    }
+                    @media (min-width: 993px){
+                        &:nth-child(even){
+                            .child--grid{
+                                .child--img{
+                                    right: -97px;
+                                    left: auto;
+                                    order: 2;
+                                    @media (max-width: 1200px){
+                                        right: -15px;
+                                    }
+                                    @media (max-width: 992px){
+                                        right: 0;
+                                    }
+                                }
+                                .child--caption{
+                                    padding: 142px 0 142px 97px;
+                                    @media (max-width: 992px){
+                                        padding: 50px 40px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        .child--name{
+                            margin-bottom: -130px;
+                        }
+                    }
+                    .child--name{
+                        text-align: center;
+                        margin-bottom: -80px;
+                        position: relative;
+                        z-index: 9;
+                        @media (max-width: 992px){
+                            display: none;
+                        }
+                        img{
+                            max-width: 80%;
+                        }
+                    }
+                    .child--grid{
+                        display: grid;
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                        grid-gap: 24px;
+                        @media (max-width: 992px){
+                            grid-gap: 0;
+                        }
+                        @media (max-width: 450px){
+                            grid-template-columns: 1fr;
+                        }
+                        .child--img{
+                            position: relative;
+                            left: -97px;
+                            @media (max-width: 1200px){
+                                left: -15px;
+                            }
+                            @media (max-width: 992px){
+                                left: 0;
+                                min-height: 450px;
+                            }
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                @media (max-width: 992px){
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                }
+                            }
+                        }
+                        .child--caption{
+                            padding: 142px 97px 142px 0;
+                            display: grid;
+                            grid-gap: 52px;
+                            @media (max-width: 992px){
+                                padding: 50px 40px;
+                                grid-gap: 32px;
+                                height: fit-content;
+                            }
+                            .child--title{
+                                font: normal normal 300 48px/1.2 Fraunces;
+                                color: #163422;
+                                margin: 0;
+                                @media (max-width: 992px){
+                                    font-size: 36px;
+                                }
+                                @media (max-width: 450px){
+                                    font-size: 32px;
+                                }
+                                span{
+                                    display: block;
+                                    color: #8E6941;
+                                    padding-left: 97px;
+                                    @media (max-width: 992px){
+                                        padding-left: 47px;
+                                        // display: flex;
+                                        // justify-content: center;
+                                    }
+                                }
+                            }
+                            .child--hastag{
+                                font: normal normal normal 20px/1.5 Raleway;
+                                color: #163422;
+                                sup{
+                                    font-size: 70%;
+                                }
+                                @media (max-width: 450px){
+                                    font-size: 17px;
+                                }
+                            }
+                            .child--text{
+                                font: normal normal normal 16px/1.5 Raleway;
+                                color: #163422;
+                            }
+                            .child--action{
+                                display: flex;
+                                .action--link{
+                                    display: block;
+                                    line-height: 46px;
+                                    border: 2px solid $color;
+                                    padding: 13px 31px;
+                                    font-weight: 300;
+                                    font-size: 16px;
+                                    line-height: 1.2;
+                                    color: $color;
+                                    position: relative;
+                                    @include transition;
+                                    &:hover{
+                                        color: #fff;
+                                        &::before{
+                                            background: $color;
+                                        }
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        left: 4px;
+                                        right: 4px;
+                                        top: 0;
+                                        bottom: 0;
+                                        background: transparent;
+                                        border-left: 1px solid $color;
+                                        border-right: 1px solid $color;
+                                        @include transition;
+                                    }
+                                    span{
+                                        position: relative;
+                                        z-index: 9;
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
