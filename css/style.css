@@ -619,7 +619,12 @@ img {
 }
 
 .booking {
-  min-height: 1064px;
+  min-height: 930px;
+}
+@media (max-width: 1200px) {
+  .booking {
+    min-height: auto;
+  }
 }
 .booking .header-booking {
   background: #163422;
@@ -628,21 +633,28 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.booking .header-booking .box .box-back {
-  display: flex;
-  align-items: center;
-}
 .booking .header-booking .box .box-back a {
   display: flex;
   align-items: center;
+  height: 100%;
 }
-.booking .header-booking .box .box-back span {
+.booking .header-booking .box .box-back a:hover svg {
+  left: -7px;
+}
+.booking .header-booking .box .box-back a svg {
+  transition: all 0.2s ease-out 0.2s;
+  -webkit-transition: all 0.2s ease-out 0.2s;
+  position: relative;
+  left: 0;
+}
+.booking .header-booking .box .box-back a span {
   font: normal normal normal 16px/1.5 Raleway;
+  font-family: Fraunces;
   color: #DAB68E;
   margin-left: 8px;
 }
 @media (max-width: 450px) {
-  .booking .header-booking .box .box-back span {
+  .booking .header-booking .box .box-back a span {
     font-size: 15px;
   }
 }
@@ -656,16 +668,34 @@ img {
 }
 .booking .header-booking .box .box-logo a img {
   display: block;
+  height: 56px;
+}
+@media (max-width: 450px) {
+  .booking .header-booking .box .box-logo a img {
+    height: 36px;
+  }
 }
 .booking .body-booking {
   padding: 60px 0 14px;
   min-height: calc(100vh - 80px - 282px);
+}
+@media (max-width: 450px) {
+  .booking .body-booking {
+    min-height: calc(100vh - 150px);
+  }
 }
 .booking .body-booking .box {
   display: grid;
   grid-template-columns: 461px 364px;
   grid-gap: 30px;
   justify-content: space-between;
+  max-width: 970px;
+  margin: auto;
+}
+@media (max-width: 992px) {
+  .booking .body-booking .box {
+    grid-template-columns: 1fr;
+  }
 }
 .booking .body-booking .box h2 {
   font: normal normal 300 24px/1.2 Fraunces;
@@ -681,6 +711,9 @@ img {
 }
 .booking .body-booking .box .box-form .group + .group {
   margin-top: 16px;
+}
+.booking .body-booking .box .box-form .group.group--hidden {
+  display: none;
 }
 .booking .body-booking .box .box-form .group .group--input {
   position: relative;
@@ -755,8 +788,176 @@ img {
 .booking .body-booking .box .box-form .group .group--input textarea:focus {
   border-color: #DAB68E;
 }
+.booking .body-booking .box .box-info {
+  margin-top: 24px;
+  border: 1px solid #F2EADF;
+  background: #fff;
+}
+.booking .body-booking .box .box-info .box-grid {
+  padding: 23px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  position: relative;
+  grid-gap: 32px;
+}
+.booking .body-booking .box .box-info .box-grid:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 23px;
+  right: 23px;
+  height: 1px;
+  background: #F2EADF;
+}
+.booking .body-booking .box .box-info .box-grid .child + .child {
+  position: relative;
+}
+.booking .body-booking .box .box-info .box-grid .child + .child:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: -16px;
+  width: 1px;
+  background: #F2EADF;
+}
+.booking .body-booking .box .box-info .box-grid .child small {
+  display: block;
+  font: normal normal normal 12px/1.4 Raleway;
+  color: #8E6941;
+}
+.booking .body-booking .box .box-info .box-grid .child span {
+  font: normal normal 300 20px/1.2 Fraunces;
+  color: #163422;
+  margin-top: 6px;
+  display: block;
+}
+@media (max-width: 767px) {
+  .booking .body-booking .box .box-info .box-grid .child span {
+    font-size: 17px;
+  }
+}
+.booking .body-booking .box .box-info .box-button {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: normal normal 300 20px/1.2 Fraunces;
+  height: 80px;
+  color: #fff;
+  background: #DAB68E;
+  cursor: pointer;
+  pointer-events: auto;
+}
+@media (max-width: 767px) {
+  .booking .body-booking .box .box-info .box-button {
+    font-size: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .booking .body-booking .box .box-info .box-button {
+    height: 60px;
+  }
+}
+.booking .body-booking .box .box-info .box-button:hover svg {
+  left: 7px;
+}
+.booking .body-booking .box .box-info .box-button svg {
+  margin-left: 8px;
+  position: relative;
+  top: 2px;
+  left: 0;
+  transition: all 0.2s ease-out 0.2s;
+  -webkit-transition: all 0.2s ease-out 0.2s;
+}
+.booking .body-booking .success {
+  text-align: center;
+  max-width: 560px;
+  margin: auto;
+  color: #163422;
+}
+.booking .body-booking .success-icon svg, .booking .body-booking .success-icon img {
+  max-height: 88px;
+}
+.booking .body-booking .success-title {
+  margin-top: 16px;
+  font: normal normal 300 32px/1.2 Fraunces;
+  font-style: italic;
+}
+@media (max-width: 1200px) {
+  .booking .body-booking .success-title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .booking .body-booking .success-title {
+    font-size: 24px;
+  }
+}
+.booking .body-booking .success-text {
+  font: normal normal normal 16px/1.5 Raleway;
+  display: grid;
+  grid-gap: 24px;
+  margin-top: 40px;
+}
+@media (max-width: 450px) {
+  .booking .body-booking .success-text {
+    font-size: 15px;
+  }
+}
+.booking .body-booking .success-text * {
+  margin: 0;
+}
+.booking .body-booking .success-back {
+  display: inline-block;
+  border: 2px solid #DAB68E;
+  padding: 12.5px 31px;
+  font-weight: 300;
+  font: normal normal normal 16px/1.5 Raleway;
+  color: #DAB68E;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  margin-top: 40px;
+}
+@media (max-width: 450px) {
+  .booking .body-booking .success-back {
+    font-size: 15px;
+  }
+}
+.booking .body-booking .success-back:hover {
+  color: #fff;
+}
+.booking .body-booking .success-back:hover::before {
+  background: #DAB68E;
+}
+.booking .body-booking .success-back::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  border-left: 1px solid #DAB68E;
+  border-right: 1px solid #DAB68E;
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+}
+.booking .body-booking .success-back span {
+  position: relative;
+  z-index: 9;
+  pointer-events: none;
+}
 .booking .footer-booking .box {
   position: relative;
+}
+.booking .footer-booking .box svg {
+  max-width: 100%;
+  height: auto;
 }
 .booking .footer-booking .box .box-copyright {
   position: absolute;

@@ -168,23 +168,36 @@
 }
 
 .booking{
-    min-height: 1064px;
+    min-height: 930px;
+    @media (max-width: 1200px){
+        min-height: auto;
+    }
     .header-booking{
         background: $color-green;
         .box{
             display: flex;
             justify-content: space-between;
             .box-back{
-                display: flex;
-                align-items: center;
                 a{
                     display: flex;
                     align-items: center;
-                }
-                span{
-                    @include font16;
-                    color: #DAB68E;
-                    margin-left: 8px;
+                    height: 100%;
+                    &:hover{
+                        svg{
+                            left: -7px;
+                        }
+                    }
+                    svg{
+                        @include transition;
+                        position: relative;
+                        left: 0;
+                    }
+                    span{
+                        @include font16;
+                        font-family: Fraunces;
+                        color: #DAB68E;
+                        margin-left: 8px;
+                    }
                 }
             }
             .box-logo{
@@ -195,19 +208,31 @@
                     display: block;
                     img{
                         display: block;
+                        height: 56px;
+                        @media (max-width: 450px){
+                            height: 36px;
+                        }
                     }
                 }
-            }
+            } 
         }
     }
     .body-booking{
         padding: 60px 0 14px;
         min-height: calc(100vh - 80px - 282px);
+        @media (max-width: 450px){
+            min-height: calc(100vh - 150px);
+        }
         .box{
             display: grid;
             grid-template-columns: 461px 364px;
             grid-gap: 30px;
             justify-content: space-between;
+            max-width: 970px;
+            margin: auto;
+            @media (max-width: 992px){
+                grid-template-columns: 1fr;
+            }
             h2{
                 @include font24;
                 margin: 0;
@@ -217,6 +242,9 @@
                 .group{
                     + .group{
                         margin-top: 16px;
+                    }
+                    &.group--hidden{
+                        display: none;
                     }
                     .group--input{
                         position: relative;
@@ -284,11 +312,152 @@
                     }
                 }
             }
+            .box-info{
+                margin-top: 24px;
+                border: 1px solid #F2EADF;
+                background: #fff;
+                .box-grid{
+                    padding: 23px;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+                    position: relative;
+                    grid-gap: 32px;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 23px;
+                        right: 23px;
+                        height: 1px;                        
+                        background: #F2EADF;
+                    }
+                    .child{
+                        + .child{
+                            position: relative;
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                top: 0;
+                                left: -16px;
+                                width: 1px;                        
+                                background: #F2EADF;
+                            }
+                        }
+                        small{
+                            display: block;
+                            @include font12;
+                            color: #8E6941;                            
+                        }
+                        span{
+                            @include font20;
+                            color: #163422;
+                            margin-top: 6px;
+                            display: block;
+                        }
+                    }
+                }
+                .box-button{
+                    margin-top: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include font20;
+                    height: 80px;
+                    color: #fff;
+                    background: $color;
+                    cursor: pointer;
+                    pointer-events: auto;
+                    @media (max-width: 767px){
+                        height: 60px;
+                    }
+                    &:hover{
+                        svg{
+                            left: 7px;
+                        }
+                    }
+                    svg{
+                        margin-left: 8px;
+                        position: relative;
+                        top: 2px;
+                        left: 0;
+                        @include transition;
+                    }
+                }
+            }
+        }
+        .success{
+            text-align: center;
+            max-width: 560px;
+            margin: auto;
+            color: #163422;
+            &-icon{
+                svg, img{
+                    max-height: 88px;
+                }
+            }
+            &-title{
+                margin-top: 16px;
+                @include font32;
+                font-style: italic;
+            }
+            &-text{
+                @include font16;
+                display: grid;
+                grid-gap: 24px;
+                margin-top: 40px;
+                *{
+                    margin: 0;
+                }
+            }
+            &-back{
+                display: inline-block;
+                border: 2px solid $color;
+                padding: 12.5px 31px;
+                font-weight: 300;
+                @include font16;
+                color: $color;
+                position: relative;
+                background: transparent;
+                cursor: pointer;
+                pointer-events: auto;
+                transition: all 0.2s ease-out 0s;
+                -webkit-transition: all 0.2s ease-out 0s;
+                margin-top: 40px;
+                &:hover{
+                    color: #fff;
+                    &::before{
+                        background: $color;
+                    }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 4px;
+                    right: 4px;
+                    top: 0;
+                    bottom: 0;
+                    background: transparent;
+                    border-left: 1px solid $color;
+                    border-right: 1px solid $color;
+                    transition: all 0.2s ease-out 0s;
+                    -webkit-transition: all 0.2s ease-out 0s;
+                }
+                span{
+                    position: relative;
+                    z-index: 9;
+                    pointer-events: none;
+                }
+            }
         }
     }
     .footer-booking{
         .box{
             position: relative;
+            svg{
+                max-width: 100%;
+                height: auto;
+            }
             .box-copyright{
                 position: absolute;
                 left: 0;
