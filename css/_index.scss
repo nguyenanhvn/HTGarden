@@ -640,14 +640,22 @@
                 .item--name{
                     font: normal normal 300 40px/1.2 Fraunces;
                     color: #163422;
+                    min-height: 96px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
                     @media (max-width: 1200px){
                         font-size: 32px;
+                        min-height: 64px;
                     }
                     @media (max-width: 767px){
                         font-size: 28px;
+                        min-height: 56px;
                     }
                     em{
                         display: block;
+                        width: 100%;
                     }
                 }
                 .item--icons{
@@ -657,10 +665,12 @@
                     display: flex;
                     justify-content: center;
                     li{
+                        position: relative;
                         + li{
                             margin-left: 4px;
                         }
                         img{
+                            display: block;
                             height: 40px;
                             @media (max-width: 450px){
                                 height: 24px;
@@ -672,6 +682,7 @@
                     @include font16;
                     color: #163422;
                     padding: 0 10px;
+                    @include textConver(4);
                     @media (max-width: 450px){
                         font-size: 14px;
                         padding: 0 16px;

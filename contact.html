@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT Garden - Hạng phòng</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="box">
+                <div class="box-menu box-left">
+                    <ul>
+                        <li class="current_page_item current-menu-item">
+                            <a href="#">Hạng phòng</a>
+                        </li>
+                        <li>
+                            <a href="#">Ẩm thực</a>
+                        </li>
+                        <li>
+                            <a href="#">Hoạt động</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-middle">
+                    <a href="#">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="box-menu box-right">
+                    <ul>
+                        <li>
+                            <a href="#">Giới thiệu</a>
+                        </li>
+                        <li class="current_page_item current-menu-item">
+                            <a href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <div class="book">
+                        <a href="#" class="book--button">
+                            <span>Đặt phòng</span>                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div data-scroll-container class="smooth-scroll">
+        <div id="main" class="conn_relative">
+            <!-- Main Small Banner -->
+            <div class="msbanner" data-anim="false">
+                <div class="child">
+                    <div class="background">
+                        <img src="images/banner-room.jpg" alt="Image">
+                    </div>
+                    <div class="container">
+                        <div class="box">
+                            <h2 class="box-heading">Liên hệ</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /Main Small Banner -->
+
+            <!-- Contact Us -->
+            <div class="contact">
+                <div class="container">
+                    <div class="box">
+                        <div class="box-top">                            
+                            <div class="box-left">
+                                <h3>Liên hệ với chúng tôi</h3>
+                                <div class="left--info">
+                                    <div class="child">
+                                        <div class="child--title">HOTLINE</div>
+                                        <ul>
+                                            <li><a href="tel: 094 997 2310" title="">094 997 2310</a></li>
+                                            <li><a href="tel: 0985 234 256" title="">0985 234 256</a></li>
+                                        </ul>
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div>
+                        <div class="box-bottom">
+                            <img src="images/gmap.jpg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /Room -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="background" style="background-image: url(images/footer-bg.jpg);">
+                    <img src="images/footer-text.svg" alt="Image">
+                </div>
+                <div class="container">
+                    <div class="box">
+                        <ul class="box-social">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                        <div class="box-info">
+                            <div class="box-sample">
+                                <span>ĐỊA CHỈ</span>
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="http://maps.google.com/?q=Thôn Miễu Một , xã Tiến Xuân, Thạch Thất">Thôn Miễu Một , xã Tiến Xuân, Thạch Thất</a>                                    
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="box-logo">
+                                <a href="#">
+                                    <img src="images/logo-footer.svg" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="box-sample">
+                                <span>Hotline</span>
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="tel: 094 997 2310">094 997 2310</a>                                  
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="tel: 08 7887 3223">08 7887 3223</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">            
+                <div class="container">
+                    <div class="box">
+                        <span>
+                            © 2023 HT Garden. Design and Development by
+                        </span>
+                        <a href="https://3conn.net/" target="_blank"><img src="images/logo-3conn.svg" alt="Logo"></a>
+                    </div>
+                </div>
+            </div>
+        </footer> <!-- /Footer -->
+    </div>
+
+    <input type="checkbox" id="menu-trigger" class="hidden">
+    <div id="header-responsive">
+        <div class="res_head conn_grid">
+            <label for="menu-trigger" class="hambuger menu-mobile--btn">
+                <span class="hambuger-box conn_pcenter">
+                    <span class="hambuger-inner"></span>
+                </span>
+            </label>
+            <div class="logo">
+                <a href="/index.html" title="" class="conn_center">
+                    <img src="images/logo.svg" alt="Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-inner conn_grid">
+            <div class="sidebar_list">
+                <ul>
+                    <!-- <li class="current_page_item current-menu-item"><a href="#" title="">Trang chủ</a></li> -->
+                    <li><a href="#" title="">Hạng phòng</a></li>
+                    <li><a href="#" title="">Ẩm thực</a></li>
+                    <li><a href="#" title="">Hoạt động</a></li>
+                    <li><a href="#" title="">Giới thiệu</a></li>
+                    <li><a href="#" title="">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="sidebar_button">
+                <a href="#" title="">
+                    <span>Đặt phòng</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end sidebar -->
+    <label for="menu-trigger" class="sidebar-overlay"></label>
+
+    <div class="lightbox" id="choose1">
+        <div class="lightbox-area">
+            <div class="area--head">
+                <span>Ngày nhận - trả phòng</span>
+                <div class="area--close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0,0H24V24H0Z" fill="none"/>
+                        <path d="M12,10.586l4.95-4.95L18.364,7.05,13.414,12l4.95,4.95L16.95,18.364,12,13.414l-4.95,4.95L5.636,16.95,10.586,12,5.636,7.05,7.05,5.636Z" fill="#163422"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="area--body">
+                <input type="text" name="daterange" style="display: none">
+            </div>
+        </div>
+        <div class="lightbox-dark"></div>
+    </div>
+
+    <div class="lightbox" id="choose2">
+        <div class="lightbox-area">
+            <div class="area--head">
+                <span>Số khách</span>
+                <div class="area--close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0,0H24V24H0Z" fill="none"/>
+                        <path d="M12,10.586l4.95-4.95L18.364,7.05,13.414,12l4.95,4.95L16.95,18.364,12,13.414l-4.95,4.95L5.636,16.95,10.586,12,5.636,7.05,7.05,5.636Z" fill="#163422"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="area--body">
+                <div class="body--options">
+                    <div class="option">
+                        <div class="option--label">Người lớn</div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="5" type="text" name="adults" id="adults">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option--label">
+                            Trẻ em
+                            <small>Trên 11 tuổi</small>
+                        </div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="0" type="text" name="children3" id="children3">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option--label">
+                            Trẻ em
+                            <small>Từ 6-11 tuổi</small>
+                        </div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="0" type="text" name="children2" id="children2">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option--label">
+                            Trẻ em
+                            <small>Từ 0-6 tuổi</small>
+                        </div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="0" type="text" name="children" id="children">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area--foot">
+                <button class="foot--button">
+                    <span>Xác nhận</span>
+                </button>
+            </div>
+        </div>
+        <div class="lightbox-dark"></div>
+    </div>
+</body>
+</html>

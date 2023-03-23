@@ -96,7 +96,6 @@ jQuery(document).ready(function() {
     });
 
     tlMenu.to(sidebarButton, 0.2, { x: 0, opacity: 1, ease: Power1.easeOut });
-
 // end mouse anim
     jQuery(document).on('click', '.hambuger', function(){
         jQuery(this).toggleClass('activated');
@@ -105,6 +104,7 @@ jQuery(document).ready(function() {
     /*=================================================
                             Custom
     =====================================================*/
+
     jQuery(document).on('click', '.plus', function() {
         jQuery(this).parent().find('.current').val(Number(jQuery(this).parent().find('.current').val()) + 1);
     });
@@ -118,49 +118,60 @@ jQuery(document).ready(function() {
     jQuery(document).on('click', '.md-trigger', function() {
         var val = jQuery(this).attr('data-modal');
         var that = jQuery(this);
-        jQuery('input[name="daterange"]').daterangepicker({
-            "inline": true,
-            // "singleRange": true,
-            "minDate": new Date(),
-            "startDate": that.attr('date-start'),
-            "endDate": that.attr('date-end'),
-            "locale": {
-                "format": "MM/DD/YYYY",
-                "separator": " - ",
-                "applyLabel": "Xác nhận",
-                "weekLabel": "W",
-                "daysOfWeek": [
-                    "CN",
-                    "T2",
-                    "T3",
-                    "T4",
-                    "T5",
-                    "T6",
-                    "T7"
-                ],
-                "monthNames": [
-                    "Tháng 1, ",
-                    "Tháng 2, ",
-                    "Tháng 3, ",
-                    "Tháng 4, ",
-                    "Tháng 5, ",
-                    "Tháng 6, ",
-                    "Tháng 7, ",
-                    "Tháng 8, ",
-                    "Tháng 9, ",
-                    "Tháng 10, ",
-                    "Tháng 11, ",
-                    "Tháng 12, "
-                ],
-                "firstDay": 1
-            },
-        }, function(start, end) {
-            jQuery('.date-start').text(start.format("DD/MM/YYYY")).attr('data-date', start.format("MM/DD/YYYY"));
-            jQuery('.date-end').text(end.format("DD/MM/YYYY")).attr('data-date', end.format("MM/DD/YYYY"));
+        if(val == '#choose1'){
+            jQuery('input[name="daterange"]').daterangepicker({
+                "inline": true,
+                // "singleRange": true,
+                "minDate": new Date(),
+                "startDate": that.attr('date-start'),
+                "endDate": that.attr('date-end'),
+                "locale": {
+                    "format": "MM/DD/YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Xác nhận",
+                    "weekLabel": "W",
+                    "daysOfWeek": [
+                        "CN",
+                        "T2",
+                        "T3",
+                        "T4",
+                        "T5",
+                        "T6",
+                        "T7"
+                    ],
+                    "monthNames": [
+                        "Tháng 1, ",
+                        "Tháng 2, ",
+                        "Tháng 3, ",
+                        "Tháng 4, ",
+                        "Tháng 5, ",
+                        "Tháng 6, ",
+                        "Tháng 7, ",
+                        "Tháng 8, ",
+                        "Tháng 9, ",
+                        "Tháng 10, ",
+                        "Tháng 11, ",
+                        "Tháng 12, "
+                    ],
+                    "firstDay": 1
+                },
+            }, function(start, end) {
+                jQuery('.date-start').text(start.format("DD/MM/YYYY")).attr('data-date', start.format("MM/DD/YYYY"));
+                jQuery('.date-end').text(end.format("DD/MM/YYYY")).attr('data-date', end.format("MM/DD/YYYY"));
 
-            jQuery('.area--date').attr('date-start', start.format("MM/DD/YYYY")).attr('date-end', end.format("MM/DD/YYYY"));
-            jQuery('.lightbox').removeClass('open');
-        });
+                jQuery('.area--date').attr('date-start', start.format("MM/DD/YYYY")).attr('date-end', end.format("MM/DD/YYYY"));
+                jQuery('.lightbox').removeClass('open');
+            });
+        } else if(val == '#choose2'){
+            var adults = jQuery('.mbooking .dropdown--current span').attr("data-adults");
+            var children = jQuery('.mbooking .dropdown--current span').attr("data-children");
+            var children2 = jQuery('.mbooking .dropdown--current span').attr("data-children2");
+            var children3 = jQuery('.mbooking .dropdown--current span').attr("data-children3");
+            jQuery('#choose2 input[name=adults]').val(adults);
+            jQuery('#choose2 input[name=children]').val(children);
+            jQuery('#choose2 input[name=children2]').val(children2);
+            jQuery('#choose2 input[name=children3]').val(children3);
+        }
         jQuery(val).addClass('open');  
     });
     jQuery(document).on('click', '.lightbox .area--close, .lightbox .lightbox-dark', function() {
@@ -186,17 +197,20 @@ jQuery(document).ready(function() {
         var adults = jQuery(this).closest('.lightbox-area').find('input[name=adults]').val();
         var children = jQuery(this).closest('.lightbox-area').find('input[name=children]').val();
         var children2 = jQuery(this).closest('.lightbox-area').find('input[name=children2]').val();
-        var count = Number(children) + Number(children2);
+        var children3 = jQuery(this).closest('.lightbox-area').find('input[name=children3]').val();
+        var count = Number(children) + Number(children2) + Number(children3);
         if(count > 0){
             jQuery('.mbooking .dropdown--current span').text(adults + " người lớn, " + count + " trẻ em");
             jQuery('.mbooking .dropdown--current span').attr("data-adults", adults);
             jQuery('.mbooking .dropdown--current span').attr("data-children", children);
             jQuery('.mbooking .dropdown--current span').attr("data-children2", children2);
+            jQuery('.mbooking .dropdown--current span').attr("data-children3", children3);
         } else {
             jQuery('.mbooking .dropdown--current span').text(adults + " người lớn");
             jQuery('.mbooking .dropdown--current span').attr("data-adults", adults);
             jQuery('.mbooking .dropdown--current span').attr("data-children", children);
             jQuery('.mbooking .dropdown--current span').attr("data-children2", children2);
+            jQuery('.mbooking .dropdown--current span').attr("data-children3", children3);
         }
 
         jQuery('.lightbox').removeClass('open');
