@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT Garden - Hoạt động</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="box">
+                <div class="box-menu box-left">
+                    <ul>
+                        <li>
+                            <a href="#">Hạng phòng</a>
+                        </li>
+                        <li>
+                            <a href="#">Ẩm thực</a>
+                        </li>
+                        <li class="current_page_item current-menu-item">
+                            <a href="#">Hoạt động</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-middle">
+                    <a href="#">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="box-menu box-right">
+                    <ul>
+                        <li>
+                            <a href="#">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <div class="book">
+                        <a href="#" class="book--button">
+                            <span>Đặt phòng</span>                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div data-scroll-container class="smooth-scroll">
+        <div id="main" class="conn_relative">
+            <!-- Main Small Banner -->
+            <div class="msbanner" data-anim="false">
+                <div class="child">
+                    <div class="background">
+                        <img src="images/banner-action.jpg" alt="Image">
+                    </div>
+                    <div class="container">
+                        <div class="box">
+                            <h2 class="box-heading">Hoạt động</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /Main Small Banner -->
+
+            <!-- Rooms -->
+            <div class="rooms">
+                <!-- Room s1 -->
+                <div class="room-s1">
+                    <div class="container">
+                        <div class="box">
+                            <div class="box-icon">
+                                <img src="images/icon/icon-action.svg" alt="Icon">
+                            </div>
+                            <div class="box-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper felis. Sed arcu velit, eleifend id pellentesque non, posuere porttitor sapien. Quisque interdum vestibulum risus, vel iaculis urna auctor vitae.</p>
+                                <p>Sed mollis, erat nec rutrum blandit, ipsum eros tincidunt mauris, ut mollis mauris elit eu odio. Praesent imperdiet mattis risus, ac eleifend massa ullamcorper et. Curabitur ligula tortor, laoreet id ante et, ultrices maximus justo.</p>
+                            </div>
+                            <div class="box-video">
+                                <video autobuffer autoloop loop controls autoplay="true" width="100%">
+                                    <source src="images/video.mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /Room s1 -->
+
+                <!-- Room s2 -->
+                <div class="room-s2">
+                    <div class="box">
+                        <div class="box-nav">
+                            <ul>
+                                <li data-id="#nav1" class="active">Bungalow Lakeside</li>
+                                <li data-id="#nav2">Bungalow Lake House</li>
+                                <li data-id="#nav3">Bungalow Garden</li>
+                                <li data-id="#nav4">Bungalow Family</li>
+                                <li data-id="#nav5">Bungalow Bamboo</li>
+                                <li data-id="#nav6">Chòi</li>
+                                <li data-id="#nav7">HT House</li>
+                            </ul>
+                        </div>
+                        <div class="container">
+                            <div class="box-contents">
+                                <div class="child" id="nav1">
+                                    <div class="child--name">
+                                        <img src="images/text-lakeside.svg" alt="Text">
+                                    </div>
+                                    <div class="child--grid">
+                                        <div class="child--img" data-scroll="" data-scroll-speed="0.5">
+                                            <img src="images/room-1.jpg" alt="Image">
+                                        </div>
+                                        <div class="child--caption">
+                                            <h3 class="child--title" data-scroll="" data-scroll-speed="0.5">
+                                                <em>Bungalow</em>
+                                                <span>Lakeside</span>
+                                            </h3>
+                                            <div class="child--hastag" data-scroll="" data-scroll-speed="0.7">
+                                                22m<sup>2</sup> / 2 người lớn / 1 trẻ em
+                                            </div>
+                                            <div class="child--text" data-scroll="" data-scroll-speed="0.9">
+                                                HT Garden - đúng như cái tên của nó, khu nghỉ dưỡng nằm trọn vẹn trong một vườn bách thảo, với những loài cây hiếm có được sưu tầm từ bốn phương.
+                                            </div>
+                                            <div class="child--action" data-scroll="" data-scroll-speed="1.1">
+                                                <a href="room-detail.html" class="action--link">
+                                                    <span>Xem chi tiết</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="child" id="nav2">
+                                    <div class="child--name">
+                                        <img src="images/text-lakehouse.svg" alt="Text">
+                                    </div>
+                                    <div class="child--grid">
+                                        <div class="child--img" data-scroll="" data-scroll-speed="0.5">
+                                            <img src="images/room-2.jpg" alt="Image">
+                                        </div>
+                                        <div class="child--caption">
+                                            <h3 class="child--title" data-scroll="" data-scroll-speed="0.5">
+                                                <em>Bungalow</em>
+                                                <span>Lakehouse</span>
+                                            </h3>
+                                            <div class="child--hastag" data-scroll="" data-scroll-speed="0.7">
+                                                22m<sup>2</sup> / 2 người lớn / 1 trẻ em
+                                            </div>
+                                            <div class="child--text" data-scroll="" data-scroll-speed="0.9">
+                                                HT Garden - đúng như cái tên của nó, khu nghỉ dưỡng nằm trọn vẹn trong một vườn bách thảo, với những loài cây hiếm có được sưu tầm từ bốn phương.
+                                            </div>
+                                            <div class="child--action" data-scroll="" data-scroll-speed="1.1">
+                                                <a href="room-detail.html" class="action--link">
+                                                    <span>Xem chi tiết</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="child" id="nav3">
+                                    <div class="child--name">
+                                        <img src="images/text-garden.svg" alt="Text">
+                                    </div>
+                                    <div class="child--grid">
+                                        <div class="child--img" data-scroll="" data-scroll-speed="0.5">
+                                            <img src="images/room-3.jpg" alt="Image">
+                                        </div>
+                                        <div class="child--caption">
+                                            <h3 class="child--title" data-scroll="" data-scroll-speed="0.5">
+                                                <em>Bungalow</em>
+                                                <span>Garden</span>
+                                            </h3>
+                                            <div class="child--hastag" data-scroll="" data-scroll-speed="0.7">
+                                                22m<sup>2</sup> / 2 người lớn / 1 trẻ em
+                                            </div>
+                                            <div class="child--text" data-scroll="" data-scroll-speed="0.9">
+                                                HT Garden - đúng như cái tên của nó, khu nghỉ dưỡng nằm trọn vẹn trong một vườn bách thảo, với những loài cây hiếm có được sưu tầm từ bốn phương.
+                                            </div>
+                                            <div class="child--action" data-scroll="" data-scroll-speed="1.1">
+                                                <a href="room-detail.html" class="action--link">
+                                                    <span>Xem chi tiết</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="child" id="nav4">
+                                    <div class="child--name">
+                                        <img src="images/text-family.svg" alt="Text">
+                                    </div>
+                                    <div class="child--grid">
+                                        <div class="child--img" data-scroll="" data-scroll-speed="0.5">
+                                            <img src="images/room-4.jpg" alt="Image">
+                                        </div>
+                                        <div class="child--caption">
+                                            <h3 class="child--title" data-scroll="" data-scroll-speed="0.5">
+                                                <em>Bungalow</em>
+                                                <span>Family</span>
+                                            </h3>
+                                            <div class="child--hastag" data-scroll="" data-scroll-speed="0.7">
+                                                22m<sup>2</sup> / 2 người lớn / 1 trẻ em
+                                            </div>
+                                            <div class="child--text" data-scroll="" data-scroll-speed="0.9">
+                                                HT Garden - đúng như cái tên của nó, khu nghỉ dưỡng nằm trọn vẹn trong một vườn bách thảo, với những loài cây hiếm có được sưu tầm từ bốn phương.
+                                            </div>
+                                            <div class="child--action" data-scroll="" data-scroll-speed="1.1">
+                                                <a href="room-detail.html" class="action--link">
+                                                    <span>Xem chi tiết</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="child" id="nav5">
+                                    <div class="child--name">
+                                        <img src="images/text-bamboo.svg" alt="Text">
+                                    </div>
+                                    <div class="child--grid">
+                                        <div class="child--img" data-scroll="" data-scroll-speed="0.5">
+                                            <img src="images/room-5.jpg" alt="Image">
+                                        </div>
+                                        <div class="child--caption">
+                                            <h3 class="child--title" data-scroll="" data-scroll-speed="0.5">
+                                                <em>Bungalow</em>
+                                                <span>Bamboo</span>
+                                            </h3>
+                                            <div class="child--hastag" data-scroll="" data-scroll-speed="0.7">
+                                                22m<sup>2</sup> / 2 người lớn / 1 trẻ em
+                                            </div>
+                                            <div class="child--text" data-scroll="" data-scroll-speed="0.9">
+                                                HT Garden - đúng như cái tên của nó, khu nghỉ dưỡng nằm trọn vẹn trong một vườn bách thảo, với những loài cây hiếm có được sưu tầm từ bốn phương.
+                                            </div>
+                                            <div class="child--action" data-scroll="" data-scroll-speed="1.1">
+                                                <a href="room-detail.html" class="action--link">
+                                                    <span>Xem chi tiết</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="child" id="nav6">
+                                    <div class="child--name">
+                                        <img src="images/text-choi.svg" alt="Text">
+                                    </div>
+                                    <div class="child--grid">
+                                        <div class="child--img" data-scroll="" data-scroll-speed="0.5">
+                                            <img src="images/room-6.jpg" alt="Image">
+                                        </div>
+                                        <div class="child--caption">
+                                            <h3 class="child--title" data-scroll="" data-scroll-speed="0.5">
+                                                <em>Chòi</em>
+                                            </h3>
+                                            <div class="child--hastag" data-scroll="" data-scroll-speed="0.7">
+                                                22m<sup>2</sup> / 2 người lớn / 1 trẻ em
+                                            </div>
+                                            <div class="child--text" data-scroll="" data-scroll-speed="0.9">
+                                                HT Garden - đúng như cái tên của nó, khu nghỉ dưỡng nằm trọn vẹn trong một vườn bách thảo, với những loài cây hiếm có được sưu tầm từ bốn phương.
+                                            </div>
+                                            <div class="child--action" data-scroll="" data-scroll-speed="1.1">
+                                                <a href="room-detail.html" class="action--link">
+                                                    <span>Xem chi tiết</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="child" id="nav7">
+                                    <div class="child--name">
+                                        <img src="images/text-hthouse.svg" alt="Text">
+                                    </div>
+                                    <div class="child--grid">
+                                        <div class="child--img" data-scroll="" data-scroll-speed="0.5">
+                                            <img src="images/room-7.jpg" alt="Image">
+                                        </div>
+                                        <div class="child--caption">
+                                            <h3 class="child--title" data-scroll="" data-scroll-speed="0.5">
+                                                <em>HT House</em>
+                                            </h3>
+                                            <div class="child--hastag" data-scroll="" data-scroll-speed="0.7">
+                                                22m<sup>2</sup> / 2 người lớn / 1 trẻ em
+                                            </div>
+                                            <div class="child--text" data-scroll="" data-scroll-speed="0.9">
+                                                HT Garden - đúng như cái tên của nó, khu nghỉ dưỡng nằm trọn vẹn trong một vườn bách thảo, với những loài cây hiếm có được sưu tầm từ bốn phương.
+                                            </div>
+                                            <div class="child--action" data-scroll="" data-scroll-speed="1.1">
+                                                <a href="room-detail.html" class="action--link">
+                                                    <span>Xem chi tiết</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /Room s2 -->
+            </div> <!-- /Room -->
+
+            <!-- Main Booking -->
+            <div class="mbooking">
+                <div class="container">
+                    <div class="box conn_relative">
+                        <div class="box-logo" data-scroll="" data-scroll-speed="0.5">
+                            <img src="images/logo-white.svg" alt="Logo">
+                        </div>
+                        <div class="box-heading" data-scroll="" data-scroll-speed="0.6">Chuyến đi ươm mầm hạnh phúc</div>
+                        <div class="box-text" data-scroll="" data-scroll-speed="0.7">
+                            Ưu đãi đặc biệt tuần này chỉ dành riêng cho nhóm khách thuê căn Bungalow LakeHouse và HT House Bungalow Lake House phù hợp cho đoàn từ 10 người. Bungalow có 2 phòng ngủ, 1 phòng khách, phòng bếp và các tiện ích thú vị trong khu.
+                        </div>
+                        <div class="box-form" data-scroll="" data-scroll-speed="0.8">
+                            <div class="form--area">
+                                <div class="area--date md-trigger" date-start="03/13/2023" date-end="03/30/2023" data-modal="#choose1">
+                                    <div class="date--current">
+                                        <label>Ngày nhận - trả phòng</label>
+                                        <div class="date--box">
+                                            <span class="date-start"></span> - <span class="date-end"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="area--dropdown md-trigger" data-modal="#choose2">
+                                    <div class="dropdown--current">
+                                        <label>Số khách</label>
+                                        <span data-adults="2" data-children="2" data-children2="1">2 người lớn, 3 trẻ em</span>
+                                    </div>
+                                </div>
+                                <div class="area--button">
+                                    <button type="button" class="button__book">
+                                        <span>Đặt phòng</span>
+                                        <svg id="Component_7_6" data-name="Component 7 – 6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <g id="Rectangle_32" data-name="Rectangle 32" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+                                            <rect width="16" height="16" stroke="none"/>
+                                            <rect x="0.5" y="0.5" width="15" height="15" fill="none"/>
+                                            </g>
+                                            <path id="Path_70" data-name="Path 70" d="M1.8,9.433h9.133a6.807,6.807,0,0,1-1-3.333,13.518,13.518,0,0,0,5.533,3.933,14.464,14.464,0,0,0-5.533,3.933,10.939,10.939,0,0,1,1-3.533H1.8Z" transform="translate(-0.633 -2.033)" fill="#fff"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="background paroller">
+                    <img src="images/bg-booking.jpg" alt="Image">
+                </div>
+            </div> <!-- /Main Booking -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="background" style="background-image: url(images/footer-bg.jpg);">
+                    <img src="images/footer-text.svg" alt="Image">
+                </div>
+                <div class="container">
+                    <div class="box">
+                        <ul class="box-social">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                        <div class="box-info">
+                            <div class="box-sample">
+                                <span>ĐỊA CHỈ</span>
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="http://maps.google.com/?q=Thôn Miễu Một , xã Tiến Xuân, Thạch Thất">Thôn Miễu Một , xã Tiến Xuân, Thạch Thất</a>                                    
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="box-logo">
+                                <a href="#">
+                                    <img src="images/logo-footer.svg" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="box-sample">
+                                <span>Hotline</span>
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="tel: 094 997 2310">094 997 2310</a>                                  
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="tel: 08 7887 3223">08 7887 3223</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">            
+                <div class="container">
+                    <div class="box">
+                        <span>
+                            © 2023 HT Garden. Design and Development by
+                        </span>
+                        <a href="https://3conn.net/" target="_blank"><img src="images/logo-3conn.svg" alt="Logo"></a>
+                    </div>
+                </div>
+            </div>
+        </footer> <!-- /Footer -->
+    </div>
+
+    <input type="checkbox" id="menu-trigger" class="hidden">
+    <div id="header-responsive">
+        <div class="res_head conn_grid">
+            <label for="menu-trigger" class="hambuger menu-mobile--btn">
+                <span class="hambuger-box conn_pcenter">
+                    <span class="hambuger-inner"></span>
+                </span>
+            </label>
+            <div class="logo">
+                <a href="/index.html" title="" class="conn_center">
+                    <img src="images/logo.svg" alt="Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-inner conn_grid">
+            <div class="sidebar_list">
+                <ul>
+                    <!-- <li class="current_page_item current-menu-item"><a href="#" title="">Trang chủ</a></li> -->
+                    <li><a href="#" title="">Hạng phòng</a></li>
+                    <li><a href="#" title="">Ẩm thực</a></li>
+                    <li><a href="#" title="">Hoạt động</a></li>
+                    <li><a href="#" title="">Giới thiệu</a></li>
+                    <li><a href="#" title="">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="sidebar_button">
+                <a href="#" title="">
+                    <span>Đặt phòng</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end sidebar -->
+    <label for="menu-trigger" class="sidebar-overlay"></label>
+
+    <div class="lightbox" id="choose1">
+        <div class="lightbox-area">
+            <div class="area--head">
+                <span>Ngày nhận - trả phòng</span>
+                <div class="area--close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0,0H24V24H0Z" fill="none"/>
+                        <path d="M12,10.586l4.95-4.95L18.364,7.05,13.414,12l4.95,4.95L16.95,18.364,12,13.414l-4.95,4.95L5.636,16.95,10.586,12,5.636,7.05,7.05,5.636Z" fill="#163422"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="area--body">
+                <input type="text" name="daterange" style="display: none">
+            </div>
+        </div>
+        <div class="lightbox-dark"></div>
+    </div>
+
+    <div class="lightbox" id="choose2">
+        <div class="lightbox-area">
+            <div class="area--head">
+                <span>Số khách</span>
+                <div class="area--close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0,0H24V24H0Z" fill="none"/>
+                        <path d="M12,10.586l4.95-4.95L18.364,7.05,13.414,12l4.95,4.95L16.95,18.364,12,13.414l-4.95,4.95L5.636,16.95,10.586,12,5.636,7.05,7.05,5.636Z" fill="#163422"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="area--body">
+                <div class="body--options">
+                    <div class="option">
+                        <div class="option--label">Người lớn</div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="5" type="text" name="adults" id="adults">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option--label">
+                            Trẻ em
+                            <small>Trên 11 tuổi</small>
+                        </div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="0" type="text" name="children3" id="children3">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option--label">
+                            Trẻ em
+                            <small>Từ 6-11 tuổi</small>
+                        </div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="0" type="text" name="children2" id="children2">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="option--label">
+                            Trẻ em
+                            <small>Từ 0-6 tuổi</small>
+                        </div>
+                        <div class="option--number">
+                            <span class="minus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="#fff" opacity="0"/>
+                                    <path d="M5,11H19v2H5Z" transform="translate(0 0)" fill="#163422"/>
+                                </svg>
+                            </span>
+                            <input class="current" value="0" type="text" name="children" id="children">
+                            <span class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M11,11V5h2v6h6v2H13v6H11V13H5V11Z" transform="translate(-5 -5)" fill="#163422"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area--foot">
+                <button class="foot--button">
+                    <span>Xác nhận</span>
+                </button>
+            </div>
+        </div>
+        <div class="lightbox-dark"></div>
+    </div>
+</body>
+</html>

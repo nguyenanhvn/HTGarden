@@ -23,6 +23,52 @@
                     font-size: 20px;
                 }
             }
+            .box-actions{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                a{
+                    min-width: 160px;
+                    margin: 0 16px;
+                    display: block;
+                    line-height: 46px;
+                    border: 2px solid $color;
+                    padding: 13px 26px;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 1.2;
+                    color: $color;
+                    position: relative;
+                    @include transition;
+                    @media (max-width: 450px){
+                        width: 100%;
+                        margin: 4px 0;
+                    }
+                    &:hover{
+                        color: #fff;
+                        &::before{
+                            background: $color;
+                        }
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 4px;
+                        right: 4px;
+                        top: 0;
+                        bottom: 0;
+                        background: transparent;
+                        border-left: 1px solid $color;
+                        border-right: 1px solid $color;
+                        @include transition;
+                    }
+                    span{
+                        position: relative;
+                        z-index: 9;
+                        pointer-events: none;
+                    }
+                }
+            }
         }
     }
 

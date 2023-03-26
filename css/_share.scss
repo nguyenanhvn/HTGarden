@@ -42,6 +42,9 @@
         @media (max-width: 767px){
             font-size: 28px;
         }
+        @media (max-width: 450px){
+            font-size: 24px;
+        }
     }
     @mixin font32{
         font: normal normal 300 32px/1.2 Fraunces;
@@ -61,23 +64,26 @@
     @mixin font20{
         font: normal normal 300 20px/1.2 Fraunces;
         @media (max-width: 767px){
-            font-size: 17px;
+            font-size: 16px;
         }
     }
     @mixin font16{
         font: normal normal normal 16px/1.5 Raleway;
         @media (max-width: 450px){
-            font-size: 15px;
+            font-size: 14px;
         }
     }
     @mixin font14{
         font: normal normal normal 14px/1.5 Raleway;
         @media (max-width: 450px){
-            font-size: 13px;
+            font-size: 12px;
         }
     }
     @mixin font12{
         font: normal normal normal 12px/1.4 Raleway;
+        @media (max-width: 450px){
+            font-size: 10px;
+        }
     }
 
 /**
@@ -94,6 +100,7 @@
 		font-size: 14px;
         line-height: 20px;
 		font-weight: normal;
+        color: #163422;
         position: relative;
 		&.none-scroll{
 			overflow: hidden;
